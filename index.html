@@ -85,22 +85,58 @@
 
   
 
-  <section class="quotation-form">
-    <h2>Request a Quotation</h2>
-    <form action="/thank-you.html" method="POST">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required />
+  <form action="https://formspree.io/f/mrborkwv" method="POST" style="max-width: 600px; margin: auto; padding: 20px; background: #f9f9f9; border-radius: 8px; font-family: 'Segoe UI', sans-serif; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required />
+  <!-- Heading -->
+  <h2 style="color: #2c3e50; margin-bottom: 5px;">Request a Quotation for UPVC Windows & Doors</h2>
+  <p style="color: #555; font-size: 15px; margin-bottom: 20px;">तुमच्या UPVC खिडक्या आणि दरवाजांसाठी कोटेशन मागवा</p>
 
-      <label for="message">Your Requirements:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+  <!-- Full Name -->
+  <label for="name" style="display:block; margin-top: 10px;">Full Name:</label>
+  <input type="text" id="name" name="name" required style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;">
 
-      <button type="submit">Submit Request</button>
-    </form>
-  </section>
+  <!-- Email -->
+  <label for="email" style="display:block; margin-top: 10px;">Email Address:</label>
+  <input type="email" id="email" name="email" required style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;">
 
+  <!-- Phone -->
+  <label for="phone" style="display:block; margin-top: 10px;">Phone Number:</label>
+  <input type="tel" id="phone" name="phone" style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;">
+
+  <!-- Product Dropdown -->
+  <label for="product" style="display:block; margin-top: 10px;">Product / Service:</label>
+  <select id="product" name="product" required style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;">
+    <option value="" disabled selected>Select an option</option>
+    <option value="UPVC Windows">UPVC Windows</option>
+    <option value="UPVC Doors">UPVC Doors</option>
+    <option value="Sliding Systems">Sliding Systems</option>
+    <option value="Casement Systems">Casement Systems</option>
+    <option value="Installation Service">Installation Service</option>
+    <option value="Repair & Maintenance">Repair & Maintenance</option>
+    <option value="Other">Other (please specify below)</option>
+  </select>
+
+  <!-- Other Product -->
+  <label for="otherProduct" style="display:block; margin-top: 10px;">If Other, please specify:</label>
+  <input type="text" id="otherProduct" name="otherProduct" style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;">
+
+  <!-- Quantity -->
+  <label for="quantity" style="display:block; margin-top: 10px;">Quantity:</label>
+  <input type="number" id="quantity" name="quantity" min="1" style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;">
+
+  <!-- Message -->
+  <label for="message" style="display:block; margin-top: 10px;">Additional Details:</label>
+  <textarea id="message" name="message" rows="4" style="width:100%; padding:8px; margin-top:4px; border:1px solid #ccc; border-radius:4px;"></textarea>
+
+  <!-- Hidden Fields -->
+  <input type="hidden" name="_redirect" value="https://www.ratanplasfab.in/thank-you/">
+  <input type="hidden" name="_subject" value="New Quotation Request from Website">
+
+  <!-- Submit Button -->
+  <button type="submit" style="margin-top: 20px; background-color: #2980b9; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+    Submit Request
+  </button>
+</form>
   <footer>
     <p>© 2025 Ratan Plasfab. All rights reserved.</p>
     <p>📍 Satara, Maharashtra | 📞 +91 98226 77223</p>
@@ -129,4 +165,5 @@
   });
 </script>
 </body>
+
 </html>
