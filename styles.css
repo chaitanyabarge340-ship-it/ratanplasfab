@@ -166,7 +166,7 @@ section h2 {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
   padding: 20px;
-  max-width: 300px;
+  max-width: 100px;
   margin: auto;
 }
 
@@ -310,3 +310,4 @@ section.visible {
   transform: translateY(0);
 
 }
+
