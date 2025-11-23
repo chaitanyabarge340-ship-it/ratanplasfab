@@ -222,3 +222,63 @@ footer {
 /* Animations */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity 500ms ease, transform 500ms ease; }
 .reveal.show { opacity: 1; transform: translateY(0); }
+
+/* ===========================
+   Mobile Optimization Styles
+   =========================== */
+
+/* Ensure images and containers scale */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Navigation */
+nav .menu-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
+/* Quote Form Styling */
+form input,
+form select,
+form button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Typography & Spacing */
+@media (max-width: 600px) {
+  h1, h2, h3 {
+    font-size: 1.2em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+}
+
+/* Gallery Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
