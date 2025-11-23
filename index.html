@@ -192,6 +192,17 @@
     }
 
     /* Layout */
+    
+    .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+    
     .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
     header {
       position: sticky; top: 0; z-index: 50;
@@ -203,6 +214,16 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 12px 0;
     }
+    <div class="menu-icon">☰</div>
+    @media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+}
     .brand {
       display: flex; align-items: center; gap: 12px; font-weight: 700;
     }
@@ -315,6 +336,11 @@
       width: 100%; margin: 0 0 14px; border-radius: 12px; border: 1px solid var(--border);
       box-shadow: var(--shadow);
     }
+    .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
 
     /* Form */
     .form {
@@ -327,6 +353,12 @@
       outline: none;
     }
     .textarea { min-height: 110px; resize: vertical; }
+    form input, form select, form button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  font-size: 16px;
+}
 
     /* Footer */
     footer {
