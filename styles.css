@@ -28,6 +28,12 @@ img {
   width: auto;
 }
 
+@media (max-width: 600px) {
+  .logo img {
+    height: 45px;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header nav {
     flex-direction: column;   /* stack menu vertically */
@@ -43,6 +49,18 @@ img {
   }
 }
 
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  padding: 5px 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 [data-theme="light"] {
   --bg: #f5f7fb;
