@@ -192,6 +192,28 @@
     }
 
     /* Layout */
+
+    .box {
+  height: auto;
+  overflow: visible;
+}
+
+    @media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+    .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.box {
+  padding: 20px;
+  box-sizing: border-box;
+}
     
     .container {
   display: flex;
