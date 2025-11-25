@@ -1,32 +1,21 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Replace with your email
-    $to = "chaitanyabarge340@gmail.com";  
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
+  $product = $_POST['product'];
+  $city = $_POST['city'];
 
-    $subject = "New Contact Form Submission";
+  $to = "chaitanyabarge340@gmail.com"; 
+  $subject = "New Quote Request";
+  $message = "Name: $name\nPhone: $phone\nProduct: $product\nCity: $city";
+  $headers = "From: no-reply@yourdomain.com";
 
-    // Collect form data safely
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
-
-    // Build email body
-    $body  = "You have a new message from your website:\n\n";
-    $body .= "Name: $name\n";
-    $body .= "Email: $email\n";
-    $body .= "Message:\n$message\n";
-
-    // Headers
-    $headers = "From: no-reply@yourdomain.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        // Redirect to thank-you page
-        header("Location: thank-you.html");
-        exit();
-    } else {
-        echo "Sorry, something went wrong. Please try again later.";
-    }
+  if(mail($to, $subject, $message, $headers)) {
+    echo "Thank you! Your request has been sent.";
+  } else {
+    echo "Sorry, there was a problem sending your request.";
+  }
+}
+?>
 }
 ?>
