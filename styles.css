@@ -11,6 +11,22 @@
   --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
   --blur: saturate(140%) blur(10px);
 }
+
+.feature-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* spacing between boxes */
+  padding: 10px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.feature-box {
+  flex: 1 1 200px; /* responsive width */
+  min-width: 150px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
 img {
   max-width: 100%;
   height: auto;
