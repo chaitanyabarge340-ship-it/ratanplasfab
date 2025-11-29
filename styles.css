@@ -396,3 +396,13 @@ form button {
     gap: 6px;
   }
 }
+/* Footer brand text fix */
+@media (max-width: 600px) {
+  footer .brand-text {
+    font-size: 16px;       /* smaller, balanced size */
+    font-weight: 600;      /* keep it bold but not overwhelming */
+    text-align: center;    /* center align for neatness */
+    letter-spacing: 0.5px; /* improve readability */
+    margin: 8px 0;         /* reduce vertical spacing */
+  }
+}
